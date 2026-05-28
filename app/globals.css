@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* === PALETA B — DARK MODE QUENTE === */
+  --color-bg-primary:    #0E0B09;
+  --color-bg-surface:    #1A1612;
+  --color-bg-elevated:   #241E18;
+
+  --color-terracota:     #CF6040;
+  --color-terracota-dim: #A84D30;
+  --color-terracota-glow:#E07A5A;
+
+  --color-oliva:         #7A8F44;
+  --color-oliva-dim:     #5C6B32;
+  --color-oliva-light:   #9AAE5C;
+
+  /* === COR DE DESTAQUE — para rollback: troque pelos valores terracota === */
+  --color-accent:      #CF6040;   /* terracota | teste oliva: #7A8F44 */
+  --color-accent-dim:  #A84D30;   /* terracota dim | teste oliva: #5C6B32 */
+  --color-accent-glow: #E07A5A;   /* terracota glow | teste oliva: #9AAE5C */
+
+  --color-neutral-900:   #2E2820;
+  --color-neutral-700:   #4A4238;
+  --color-neutral-500:   #6E6256;
+  --color-neutral-300:   #A09488;
+  --color-neutral-100:   #D4C8BC;
+
+  --color-text-primary:  #F2EDE8;
+  --color-text-secondary:#B0A89E;
+  --color-text-muted:    #6E6256;
+
+  --color-border:        #2E2820;
+  --color-border-subtle: #1E1A16;
+
+  /* === TIPOGRAFIA === */
+  --font-display:  var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-body:     var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-mono:     var(--font-fragment-mono), "Fragment Mono", monospace;
+
+  /* === ESPAÇAMENTO === */
+  --spacing-section: 8rem;
+  --spacing-section-sm: 5rem;
+
+  /* === BORDAS === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* === TRANSIÇÕES === */
+  --ease-smooth:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-cinematic: cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* === SOMBRAS === */
+  --shadow-terracota: 0 0 40px -10px rgba(207, 96, 64, 0.3);
+  --shadow-oliva:     0 0 40px -10px rgba(122, 143, 68, 0.25);
+  --shadow-glow:      0 0 80px -20px rgba(207, 96, 64, 0.15);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* === BASE ===
+   Tailwind preflight já inclui o reset de margin/padding.
+   Aqui só adicionamos estilos que não conflitam com utilities. */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-700);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracota-dim);
+}
+
+/* === SELEÇÃO === */
+::selection {
+  background: rgba(207, 96, 64, 0.25);
+  color: var(--color-text-primary);
+}
+
+/* === UTILITÁRIOS TIPOGRÁFICOS === */
+.font-display { font-family: var(--font-display); }
+.font-body    { font-family: var(--font-body); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* === GRADIENTES === */
+.gradient-terracota {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dim));
+}
+.gradient-surface {
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-surface) 100%);
+}
+
+/* === TEXTO GRADIENTE === */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-glow), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-neutral-100), var(--color-neutral-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === BORDAS SUTIS === */
+.border-subtle {
+  border: 1px solid var(--color-border);
+}
+.border-glow {
+  border: 1px solid rgba(207, 96, 64, 0.2);
+  box-shadow: var(--shadow-terracota);
 }
