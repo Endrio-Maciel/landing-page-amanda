@@ -2,23 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  RevealOnScroll,
-  RevealGroup,
-  RevealItem,
-} from "@/components/ui/RevealOnScroll";
-
-const VALORES = [
-  {
-    label: "Sensibilidade",
-    desc: "Um olhar estético que aparece naturalmente no trabalho",
-  },
-  {
-    label: "Autenticidade",
-    desc: "Criar algo que passe verdade, sem ficar artificial",
-  },
-  { label: "Identidade", desc: "Cada projeto carrega personalidade própria" },
-];
+import { RevealOnScroll, RevealGroup, RevealItem } from "@/components/ui/RevealOnScroll";
 
 const NUMEROS = [
   { valor: "11+", label: "Projetos" },
@@ -152,39 +136,6 @@ export function About() {
                 projetos reais.
               </p>
             </RevealOnScroll>
-
-            <RevealOnScroll delay={0.15}>
-              <blockquote className="border-l-2 border-[var(--color-accent)] pl-6 mb-10">
-                <p
-                  className="text-xl md:text-2xl font-light leading-relaxed text-[#F2EDE8] italic"
-                  style={{ fontFamily: "var(--font-display, Georgia, serif)" }}
-                >
-                  "Gosto de criar algo que passe sensação, identidade e verdade,
-                  sem ficar artificial."
-                </p>
-              </blockquote>
-            </RevealOnScroll>
-
-            <RevealGroup
-              stagger={0.1}
-              delay={0.1}
-              amount={0.3}
-              className="space-y-4 mb-12"
-            >
-              {VALORES.map((v) => (
-                <RevealItem key={v.label} variant="slide-left">
-                  <div className="flex items-start gap-4 group">
-                    <span className="mt-1 w-1 h-1 rounded-full bg-[var(--color-accent)] flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                    <div>
-                      <p className="text-sm text-[#F2EDE8] mb-0.5">{v.label}</p>
-                      <p className="text-xs text-[#6E6256] leading-relaxed">
-                        {v.desc}
-                      </p>
-                    </div>
-                  </div>
-                </RevealItem>
-              ))}
-            </RevealGroup>
 
             <RevealOnScroll delay={0.2}>
               <p className="text-[11px] uppercase tracking-[0.2em] text-[#4A4238] mb-6 leading-relaxed">
