@@ -100,6 +100,13 @@ export function Portfolio() {
     return PROJECTS.filter((p) => p.category === active);
   }, [active]);
 
+  const handleBack = () => {
+    setSelectedProject(null);
+    setTimeout(() => {
+      document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
+
   return (
     <section id="portfolio" className="w-full bg-[#0E0B09] py-24 md:py-32">
       <div className="max-w-[1200px] mx-auto px-8 sm:px-12 md:px-16 lg:px-20">
@@ -109,7 +116,7 @@ export function Portfolio() {
             <AlbumView
               key="album"
               project={selectedProject}
-              onBack={() => setSelectedProject(null)}
+              onBack={handleBack}
             />
           ) : (
             <motion.div
