@@ -192,11 +192,11 @@ export function Portfolio() {
                         </div>
                       )}
 
-                      {/* Overlay hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0E0B09]/90 via-[#0E0B09]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                      {/* Overlay — sempre visível no mobile, hover no desktop */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0E0B09]/90 via-[#0E0B09]/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-400" />
 
-                      {/* Info card */}
-                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-3 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-400">
+                      {/* Info card — sempre visível no mobile, hover no desktop */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-0 opacity-100 sm:translate-y-3 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100 transition-all duration-400">
                         <div className="flex items-center gap-2 mb-2">
                           {project.tags.slice(0, 2).map((tag) => (
                             <span key={tag} className="text-[10px] uppercase tracking-wider text-[var(--color-accent)]">

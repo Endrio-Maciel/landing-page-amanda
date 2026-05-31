@@ -105,6 +105,7 @@ export const PROJECTS: Project[] = [
     category: "design",
     tags: ["Logotipo", "Branding"],
     thumb: "/images/design-logotipo-01.jpg",
+    featured: true,
     orientation: "portrait",
   },
   {
