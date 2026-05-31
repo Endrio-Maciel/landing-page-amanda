@@ -5,21 +5,20 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 const WHATSAPP_NUMBER = "5181820743";
 
-// Atualizar com os dados reais
 const CONTACT_LINKS = [
   {
     label: "WhatsApp",
-    value: "+55 51 8182-0743",
+    value: "+55 51 98182-0743",
     href: `https://wa.me/${WHATSAPP_NUMBER}`,
   },
   {
     label: "Instagram",
-    value: "@amanda_valladares", // atualizar handle
+    value: "@amanda_valladares",
     href: "https://instagram.com/amanda__valladares",
   },
   {
     label: "Email",
-    value: "amanda@email.com", // atualizar email
+    value: "amanda2428valladares@gmail.com",
     href: "mailto:amanda@email.com",
   },
 ];

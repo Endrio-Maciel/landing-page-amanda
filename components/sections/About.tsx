@@ -2,7 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { RevealOnScroll, RevealGroup, RevealItem } from "@/components/ui/RevealOnScroll";
+import {
+  RevealOnScroll,
+  RevealGroup,
+  RevealItem,
+} from "@/components/ui/RevealOnScroll";
 
 const NUMEROS = [
   { valor: "11+", label: "Projetos" },
