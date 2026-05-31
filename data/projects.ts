@@ -9,6 +9,7 @@ export interface Project {
   thumb: string;
   featured?: boolean;
   orientation?: "portrait" | "landscape";
+  images?: string[];
 }
 
 export const PROJECTS: Project[] = [
@@ -21,6 +22,18 @@ export const PROJECTS: Project[] = [
     thumb: "/images/ensaio-andrielly-01.jpg",
     featured: true,
     orientation: "portrait",
+    images: [
+      "/images/ensaio-andrielly-01.jpg",
+      "/images/ensaio-andrielly-02.jpg",
+      "/images/ensaio-andrielly-03.jpg",
+      "/images/ensaio-andrielly-04.jpg",
+      "/images/ensaio-andrielly-05.jpg",
+      "/images/ensaio-andrielly-06.jpg",
+      "/images/ensaio-andrielly-07.jpg",
+      "/images/ensaio-andrielly-08.jpg",
+      "/images/ensaio-andrielly-09.jpg",
+      "/images/ensaio-andrielly-10.jpg",
+    ],
   },
   {
     id: 2,
@@ -40,6 +53,14 @@ export const PROJECTS: Project[] = [
     thumb: "/images/ensaio-amanda-01.jpg",
     featured: true,
     orientation: "portrait",
+    images: [
+      "/images/ensaio-amanda-01.jpg",
+      "/images/ensaio-amanda-02.jpg",
+      "/images/ensaio-amanda-03.jpg",
+      "/images/ensaio-amanda-04.jpg",
+      "/images/ensaio-amanda-05.jpg",
+      "/images/ensaio-amanda-06.jpg",
+    ],
   },
   {
     id: 4,
