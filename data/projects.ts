@@ -69,15 +69,6 @@ export const PROJECTS: Project[] = [
     orientation: "portrait",
   },
   {
-    id: 7,
-    title: "Identidade Visual — Cervejaria",
-    subtitle: "Design de rótulo para Cervejaria Ouro Velho",
-    category: "design",
-    tags: ["Identidade Visual", "Branding", "Rótulo"],
-    thumb: "/images/design-identidade-01.jpg",
-    orientation: "landscape",
-  },
-  {
     id: 8,
     title: "Banner — Amanda Carvalho",
     subtitle: "Material visual para Beauty Studio",
@@ -93,6 +84,15 @@ export const PROJECTS: Project[] = [
     category: "design",
     tags: ["Logotipo", "Branding"],
     thumb: "/images/design-logotipo-01.jpg",
+    orientation: "portrait",
+  },
+  {
+    id: 7,
+    title: "Identidade Visual — Cervejaria",
+    subtitle: "Design de rótulo para Cervejaria Ouro Velho",
+    category: "design",
+    tags: ["Identidade Visual", "Branding", "Rótulo"],
+    thumb: "/images/design-identidade-01.jpg",
     orientation: "portrait",
   },
 ];
