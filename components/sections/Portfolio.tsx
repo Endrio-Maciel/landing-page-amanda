@@ -101,10 +101,8 @@ export function Portfolio() {
   }, [active]);
 
   const handleBack = () => {
+    document.getElementById("portfolio")?.scrollIntoView({ behavior: "instant" });
     setSelectedProject(null);
-    setTimeout(() => {
-      document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
-    }, 50);
   };
 
   return (
