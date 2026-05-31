@@ -2,46 +2,61 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { RevealOnScroll, RevealGroup, RevealItem } from "@/components/ui/RevealOnScroll";
+import {
+  RevealOnScroll,
+  RevealGroup,
+  RevealItem,
+} from "@/components/ui/RevealOnScroll";
 
 const VALORES = [
-  { label: "Sensibilidade", desc: "Um olhar estético que aparece naturalmente no trabalho" },
-  { label: "Autenticidade", desc: "Criar algo que passe verdade, sem ficar artificial" },
+  {
+    label: "Sensibilidade",
+    desc: "Um olhar estético que aparece naturalmente no trabalho",
+  },
+  {
+    label: "Autenticidade",
+    desc: "Criar algo que passe verdade, sem ficar artificial",
+  },
   { label: "Identidade", desc: "Cada projeto carrega personalidade própria" },
 ];
 
 const NUMEROS = [
   { valor: "11+", label: "Projetos" },
-  { valor: "3",   label: "Áreas" },
-  { valor: "∞",   label: "Ideias" },
+  { valor: "2", label: "Áreas" },
+  { valor: "∞", label: "Ideias" },
 ];
 
 export function About() {
   return (
-    <section
-      id="sobre"
-      className="w-full bg-[#1A1612] overflow-hidden"
-    >
+    <section id="sobre" className="w-full bg-[#1A1612] overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-8 sm:px-12 md:px-16 lg:px-20">
-
         {/* Grid principal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-16 py-24 md:py-32">
-
           {/* ── Coluna esquerda: foto ── */}
-          <RevealOnScroll variant="fade" amount={0.1} className="relative mb-16 lg:mb-0">
-            {/* Frame decorativo */}
+          <RevealOnScroll
+            variant="fade"
+            amount={0.1}
+            className="relative mb-16 lg:mb-0"
+          >
             <div className="relative">
-              {/* Borda terracota deslocada */}
+              {/* Borda deslocada */}
               <motion.div
                 initial={{ opacity: 0, x: -16, y: 16 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                transition={{
+                  duration: 1,
+                  delay: 0.3,
+                  ease: [0.76, 0, 0.24, 1],
+                }}
                 className="absolute -left-4 -bottom-4 w-full h-full border border-[var(--color-accent)]/20 rounded-sm z-0"
               />
 
               {/* Foto */}
-              <div className="relative z-10 overflow-hidden rounded-sm" style={{ aspectRatio: "3/4" }}>
+              <div
+                className="relative z-10 overflow-hidden rounded-sm"
+                style={{ aspectRatio: "3/4" }}
+              >
                 <Image
                   src="/images/ensaio-pessoal-01.jpg"
                   alt="Amanda Valladares"
@@ -50,7 +65,6 @@ export function About() {
                   className="object-cover object-top"
                   priority
                 />
-                {/* Gradiente sutil na base */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1612]/60 via-transparent to-transparent" />
               </div>
 
@@ -81,7 +95,9 @@ export function About() {
                   <div className="text-center">
                     <p
                       className="text-3xl font-light text-[#F2EDE8] mb-1"
-                      style={{ fontFamily: "var(--font-display, Georgia, serif)" }}
+                      style={{
+                        fontFamily: "var(--font-display, Georgia, serif)",
+                      }}
                     >
                       {n.valor}
                     </p>
@@ -96,8 +112,6 @@ export function About() {
 
           {/* ── Coluna direita: texto ── */}
           <div className="flex flex-col justify-center">
-
-            {/* Label */}
             <RevealOnScroll>
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-8 h-px bg-[var(--color-accent)]" />
@@ -110,7 +124,6 @@ export function About() {
               </div>
             </RevealOnScroll>
 
-            {/* Nome */}
             <RevealOnScroll delay={0.05}>
               <h2
                 className="text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] mb-2"
@@ -126,48 +139,53 @@ export function About() {
               </h2>
             </RevealOnScroll>
 
-            {/* Bio */}
             <RevealOnScroll delay={0.1}>
               <p className="text-[#B0A89E] text-base leading-relaxed mb-6">
-                Sou criativa, observadora e curiosa por natureza. Sempre gostei de arte,
-                música, filmes e de prestar atenção nos detalhes e nas histórias das pessoas.
+                Sou criativa, observadora e curiosa por natureza. Sempre gostei
+                de arte, música, filmes e de prestar atenção nos detalhes e nas
+                histórias das pessoas.
               </p>
               <p className="text-[#B0A89E] text-base leading-relaxed mb-10">
-                Estudante de Publicidade e Propaganda com referências que vão muito além da
-                faculdade — construindo minha vida aos poucos, buscando crescer
-                profissionalmente e transformar ideias em projetos reais.
+                Estudante de Publicidade e Propaganda com referências que vão
+                muito além da faculdade — construindo minha vida aos poucos,
+                buscando crescer profissionalmente e transformar ideias em
+                projetos reais.
               </p>
             </RevealOnScroll>
 
-            {/* Quote em destaque */}
             <RevealOnScroll delay={0.15}>
               <blockquote className="border-l-2 border-[var(--color-accent)] pl-6 mb-10">
                 <p
                   className="text-xl md:text-2xl font-light leading-relaxed text-[#F2EDE8] italic"
                   style={{ fontFamily: "var(--font-display, Georgia, serif)" }}
                 >
-                  "Gosto de criar algo que passe sensação,
-                  identidade e verdade, sem ficar artificial."
+                  "Gosto de criar algo que passe sensação, identidade e verdade,
+                  sem ficar artificial."
                 </p>
               </blockquote>
             </RevealOnScroll>
 
-            {/* Valores */}
-            <RevealGroup stagger={0.1} delay={0.1} amount={0.3} className="space-y-4 mb-12">
+            <RevealGroup
+              stagger={0.1}
+              delay={0.1}
+              amount={0.3}
+              className="space-y-4 mb-12"
+            >
               {VALORES.map((v) => (
                 <RevealItem key={v.label} variant="slide-left">
                   <div className="flex items-start gap-4 group">
                     <span className="mt-1 w-1 h-1 rounded-full bg-[var(--color-accent)] flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
                     <div>
                       <p className="text-sm text-[#F2EDE8] mb-0.5">{v.label}</p>
-                      <p className="text-xs text-[#6E6256] leading-relaxed">{v.desc}</p>
+                      <p className="text-xs text-[#6E6256] leading-relaxed">
+                        {v.desc}
+                      </p>
                     </div>
                   </div>
                 </RevealItem>
               ))}
             </RevealGroup>
 
-            {/* Manifesto + CTA */}
             <RevealOnScroll delay={0.2}>
               <p className="text-[11px] uppercase tracking-[0.2em] text-[#4A4238] mb-6 leading-relaxed">
                 Entre câmeras, designs, vídeos e cafés em dias chuvosos
@@ -177,15 +195,19 @@ export function About() {
                 className="group inline-flex items-center gap-3 px-6 py-3 border border-[var(--color-accent)]/30 text-[var(--color-accent)] text-xs uppercase tracking-[0.15em] rounded-sm hover:bg-[var(--color-accent)] hover:text-[#F2EDE8] transition-all duration-400"
               >
                 Vamos trabalhar juntos
-                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-300">
+                  →
+                </span>
               </a>
             </RevealOnScroll>
-
           </div>
         </div>
 
-        {/* Linha divisória com texto flutuante */}
-        <RevealOnScroll variant="fade" className="relative py-8 border-t border-[#2E2820]">
+        {/* Linha divisória */}
+        <RevealOnScroll
+          variant="fade"
+          className="relative py-8 border-t border-[#2E2820]"
+        >
           <div className="flex items-center justify-between">
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#4A4238]">
               Amanda Valladares — 2025
@@ -198,7 +220,6 @@ export function About() {
             </span>
           </div>
         </RevealOnScroll>
-
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
-const WHATSAPP_NUMBER = "5551818207431";
+const WHATSAPP_NUMBER = "5181820743";
 
 // Atualizar com os dados reais
 const CONTACT_LINKS = [

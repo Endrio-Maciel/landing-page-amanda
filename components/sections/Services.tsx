@@ -19,20 +19,6 @@ const SERVICES = [
   },
   {
     number: "02",
-    category: "Vídeo",
-    tagline: "Movimento com intenção criativa",
-    description:
-      "Conteúdo audiovisual para marcas e pessoas que querem comunicar com profundidade. De Reels dinâmicos a vídeos institucionais com alma.",
-    items: [
-      "Reels e conteúdo para redes sociais",
-      "Vídeo institucional",
-      "Cobertura de eventos",
-      "Conteúdo para marca pessoal",
-    ],
-    cta: "Quero um vídeo",
-  },
-  {
-    number: "03",
     category: "Design",
     tagline: "Identidade visual com personalidade",
     description:

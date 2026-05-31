@@ -23,6 +23,7 @@ export function Portfolio() {
 
   const filtered = useMemo(() => {
     if (active === "destaques") return PROJECTS.filter((p) => p.featured);
+    if (active === "fotografia") return PROJECTS.filter((p) => p.category === "fotografia" && p.featured);
     return PROJECTS.filter((p) => p.category === active);
   }, [active]);
 
@@ -92,6 +93,7 @@ export function Portfolio() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     style={{ objectPosition: "center top" }}
+                    loading={i === 0 ? "eager" : "lazy"}
                   />
                 ) : (
                   <div

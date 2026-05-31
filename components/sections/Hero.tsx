@@ -3,14 +3,12 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const HEADLINES = [
-  "Fotografia, vídeo e design",
-  "por Amanda Valladares.",
-];
+const HEADLINES = ["Fotografia e design", "por Amanda Valladares."];
 
-const SUBHEAD = "Criando imagens que fazem alguém sentir alguma coisa ao olhar.";
+const SUBHEAD =
+  "Criando imagens que fazem alguém sentir alguma coisa ao olhar.";
 
-const SERVICES = ["Videomaker", "Fotógrafa", "Designer", "Diretora Criativa"];
+const SERVICES = ["Fotógrafa", "Designer", "Diretora Criativa"];
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -26,10 +24,7 @@ export function Hero() {
       className="relative w-full h-screen min-h-[700px] flex items-center overflow-hidden"
     >
       {/* Background com parallax */}
-      <motion.div
-        style={{ y: bgY, scale }}
-        className="absolute inset-0 z-0"
-      >
+      <motion.div style={{ y: bgY, scale }} className="absolute inset-0 z-0">
         {/* Base */}
         <div className="absolute inset-0 bg-[#0E0B09]" />
 
@@ -45,7 +40,8 @@ export function Hero() {
             maxWidth: 800,
             maxHeight: 800,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(207,96,64,0.18) 0%, rgba(190,80,40,0.10) 35%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(207,96,64,0.18) 0%, rgba(190,80,40,0.10) 35%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -62,7 +58,8 @@ export function Hero() {
             maxWidth: 680,
             maxHeight: 680,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(200,130,70,0.10) 0%, rgba(180,100,50,0.06) 40%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(200,130,70,0.10) 0%, rgba(180,100,50,0.06) 40%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />
@@ -72,7 +69,8 @@ export function Hero() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "radial-gradient(ellipse 80% 60% at 35% 55%, rgba(160,80,40,0.07) 0%, transparent 100%)",
+            background:
+              "radial-gradient(ellipse 80% 60% at 35% 55%, rgba(160,80,40,0.07) 0%, transparent 100%)",
           }}
         />
 
@@ -87,7 +85,8 @@ export function Hero() {
             maxWidth: 500,
             maxHeight: 500,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(122,143,68,0.09) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(122,143,68,0.09) 0%, transparent 70%)",
             filter: "blur(90px)",
           }}
         />
@@ -151,7 +150,7 @@ export function Hero() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.55, ease: [0.76, 0, 0.24, 1] }}
-            className="text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-[-0.02em] italic text-[#B0A89E]"
+            className="text-3xl md:text-4xl lg:text-5xl font-light leading-[1.05] tracking-[-0.02em] italic text-[#B0A89E]"
             style={{ fontFamily: "var(--font-display, Georgia, serif)" }}
           >
             {HEADLINES[1]}
@@ -203,7 +202,9 @@ export function Hero() {
             className="group flex items-center gap-3 px-6 py-3 bg-[var(--color-accent)] text-[#F2EDE8] text-sm tracking-wider uppercase rounded-sm hover:bg-[var(--color-accent-glow)] transition-colors duration-300"
           >
             Ver Portfólio
-            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300">
+              →
+            </span>
           </motion.a>
         </motion.div>
       </motion.div>
@@ -216,7 +217,9 @@ export function Hero() {
         style={{ opacity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-[#4A4238]">Scroll</span>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-[#4A4238]">
+          Scroll
+        </span>
         <div className="w-px h-10 bg-gradient-to-b from-[#4A4238] to-transparent">
           <motion.div
             animate={{ y: [0, 32, 0] }}
