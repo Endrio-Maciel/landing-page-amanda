@@ -50,7 +50,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs uppercase tracking-[0.15em] text-[#A09488] hover:text-[#F2EDE8] transition-colors duration-300"
+                className="text-xs uppercase tracking-[0.15em] text-[#C4B8A8] hover:text-[#F2EDE8] transition-colors duration-300"
               >
                 {link.label}
               </a>

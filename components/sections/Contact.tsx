@@ -82,7 +82,7 @@ export function Contact() {
                     className="group flex items-center justify-between border-b border-[#2E2820] py-5 hover:border-[var(--color-accent)]/40 transition-colors duration-300"
                   >
                     <div>
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-[#8C7E74] mb-1">
+                      <p className="text-[10px] uppercase tracking-[0.2em] text-[#B0A89E] mb-1">
                         {link.label}
                       </p>
                       <p className="text-[#B0A89E] text-sm group-hover:text-[#F2EDE8] transition-colors duration-300">
@@ -103,7 +103,7 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
               <div className="space-y-8">
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-[#8C7E74]">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-[#B0A89E]">
                     Seu nome
                   </label>
                   <input
@@ -116,7 +116,7 @@ export function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] uppercase tracking-[0.2em] text-[#8C7E74]">
+                  <label className="text-[10px] uppercase tracking-[0.2em] text-[#B0A89E]">
                     Mensagem
                   </label>
                   <textarea
@@ -139,7 +139,7 @@ export function Contact() {
                     →
                   </span>
                 </button>
-                <p className="text-[10px] text-[#8C7E74] leading-relaxed">
+                <p className="text-[10px] text-[#B0A89E] leading-relaxed">
                   Você será redirecionado para o WhatsApp com a mensagem já
                   preenchida.
                 </p>
