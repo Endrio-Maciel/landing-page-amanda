@@ -158,7 +158,7 @@ export function Contact() {
               Amanda Valladares — 2026
             </span>
             <span className="text-[10px] uppercase tracking-[0.25em] text-[#4A4238]">
-              Fotografia · Vídeo · Design
+              Fotografia · Design
             </span>
             <span
               className="text-[#2E2820] text-4xl font-light select-none"

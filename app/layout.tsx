@@ -18,10 +18,10 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Amanda Valladares — Fotografia, Vídeo & Design",
+  title: "Amanda Valladares — Fotografia & Design",
   description:
-    "Criando imagens que fazem alguém sentir alguma coisa ao olhar. Fotografia, vídeo e design com personalidade.",
-  keywords: ["videomaker", "fotógrafa", "designer", "direção criativa", "branding", "Amanda Valladares"],
+    "Criando imagens que fazem alguém sentir alguma coisa ao olhar. Fotografia e design com personalidade.",
+  keywords: ["fotógrafa", "designer", "direção criativa", "branding", "Amanda Valladares"],
 };
 
 export default function RootLayout({

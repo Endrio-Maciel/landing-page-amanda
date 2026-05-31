@@ -188,7 +188,7 @@ export function About() {
 
             <RevealOnScroll delay={0.2}>
               <p className="text-[11px] uppercase tracking-[0.2em] text-[#4A4238] mb-6 leading-relaxed">
-                Entre câmeras, designs, vídeos e cafés em dias chuvosos
+                Entre câmeras, designs e cafés em dias chuvosos
               </p>
               <a
                 href="#contato"
